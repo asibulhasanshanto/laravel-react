@@ -24,6 +24,8 @@ use App\Http\Controllers\Api\AuthController;
 //     ]);
 // });
 Route::post('/register', [AuthController::class, 'registerWithEmail']);
+Route::post('/login', [AuthController::class, 'loginwithEmail']);
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
